@@ -1,4 +1,5 @@
 # DidysisProjektas
+<<<<<<< HEAD
 
 ## Test puslapis:
 https://vmu.lt/
@@ -14,3 +15,5 @@ Sukurti 5 tekstai:
 4. GetResultText;
 
 5.
+=======
+>>>>>>> origin/master
