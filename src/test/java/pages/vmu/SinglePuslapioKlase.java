@@ -12,6 +12,7 @@ public class SinglePuslapioKlase {
 
    public static void enterMessageToInputField(String mesage) {
       By locator = By.xpath("//*[@id=\"wp-block-search__input-1\"]"));
+      String message;
       Common.sendKeys(locator, message);
 //      input.sendKeys(message);
 //      WebElement input = Common.findElement(By.xpath("//*[@id=\"wp-block-search__input-1\"]"));
