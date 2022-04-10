@@ -14,6 +14,6 @@ Sukurti 5 tekstai:
 
 4. GetResultText;
 
-5.
+5. Add Cookies;
 =======
 >>>>>>> origin/master
