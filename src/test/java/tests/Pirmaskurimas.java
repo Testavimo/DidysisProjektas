@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 public class Pirmaskurimas {
 
 
- //?   @BeforeTest DRIVERIOSUKURIMAS; PuslapioAtidarymas; popup uzdarymas
+    //?   @BeforeTest DRIVERIOSUKURIMAS; PuslapioAtidarymas; popup uzdarymas
     @Test
 
 //sukuriame webDriver objekta ir atidarome puslapi
@@ -27,9 +27,9 @@ public class Pirmaskurimas {
 
         driver.quit();
 
- // aprasome reikalingus elementus (reklamos)
- // WebElement popup = driver.findElement(By.xpath("randu elementa")
- // WebElement popupCloseButton = driver.findElement(By.xpath()
+        // aprasome reikalingus elementus (reklamos)
+        // WebElement popup = driver.findElement(By.xpath("randu elementa")
+        // WebElement popupCloseButton = driver.findElement(By.xpath()
 
 // sulaukiame kol reklamos elementas bus matomas ir ji uzdarome (BD explicit wait'as)
 // WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -43,22 +43,20 @@ public class Pirmaskurimas {
 
 // Ivedame reiksme,paspaudziame mygtuka,nuskaitome teksta
 //String actualInput = "Labas";
-//?cia jau kitam lektoriaus lape buvo: String actualOutput = null;
+// String actualOutput = null;
 //input.sendKeys(actualInput);
 //button.click();
 //String expectedInput = resultField.getText();
 
-//?cia kitam lektoriaus lape (2paskaita 2is3 33min)
+// (2paskaita 2is3 33min)
 //? Veiksmai
 //?input.sendKeys(actualInput);
 //? button.click();
 //? actualOutput = resultField.getText();
 
 
-
 //Palyginame ivesta ir nuskaityta tekstus
 //Assert.assertEquals(actualInput, expectedInput);
-//?kitam lektoriaus lape:
 //?Assert.assertEquals(actualInput, actualOutput);
 
 // Uzdarome narsykle
@@ -66,8 +64,6 @@ public class Pirmaskurimas {
 //}
 
 
-
-
-        }
+    }
 
 }

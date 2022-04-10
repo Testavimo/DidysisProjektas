@@ -8,10 +8,9 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.Common;
 import pages.vmu.CommonVmu;
-import pages.vmu.SinglePuslapioKlase;
 import utils.Driver;
 
-public class TestasDemo {
+public class SingleFormDemoTest {
 
     @BeforeTest
     public void init() {
@@ -26,6 +25,7 @@ public class TestasDemo {
         CommonVmu.waitForAddPopupToBeVisible();
         CommonVmu.closeAdd();
     }
+
     @Test
     public void TestSingleInputField() {
 
@@ -41,9 +41,9 @@ public class TestasDemo {
         String actualOutput = null;
 
         //Veiksmai
-        SinglePuslapioKlase.enterMessageToInputField(actualInput);
-        SinglePuslapioKlase.clickShowMessageButton();
-        actualOutput = SinglePuslapioKlase.getResultText();
+        pages.vmu.SingleFormDemoTest.enterMessageToInputField(actualInput);
+        pages.vmu.SingleFormDemoTest.clickShowMessageButton();
+        actualOutput = pages.vmu.SingleFormDemoTest.getResultText();
 
         // Palyginame įvestą ir nuskaitytą tekstus
         Assert.assertEquals(actualInput, actualOutput);
@@ -53,29 +53,25 @@ public class TestasDemo {
     public void testMultipleInputFields() {
 
         // Aprašome kitus reikalingus elementus
-        WebElement inputA = Common.findElement(By.xpath("randu elementa"));
-        WebElement inputB = Common.findElement(By.xpath("randu"));
-        WebElement button = Common.findElement(By.xpath("randu"));
-        WebElement resultField = Common.findElement(By.xpath("randu"));
+        // https://vmu.lt/?s= Paieskos laukelyje ivedu netinkama reiksme "Labas"
+        WebElement inputA = Common.findElement(By.xpath("//*[@id=\"primary\"]/div/p/strong"));
 
-        // Įvedame reikšmes, paspaudžiame mygtuka, nuskaitome tekstą, palyginame
-        // Duomenys
-        String expectedOutput = "7";
-        String actualOutput = null;
+        // https://vmu.lt/?s= Paieskos laukelyje ivedu tinkama reiksme "Miškas"
+        WebElement inputB = Common.findElement(By.xpath("//*[@id=\"primary\"]/div/p"));
 
-        // Veiksmai
-        inputA.sendKeys("2");
-        inputB.sendKeys("5");
-        button.click();
-        actualOutput = resultField.getText();
+//      Click Button Search
+        WebElement button = Common.findElement(By.xpath("//*[@id=\"primary\"]/div/div[2]/form/div[1]/button"));
 
-        // Palyginimas
-        Assert.assertEquals(actualOutput, expectedOutput);
+
+        WebElement checkbox = Common.findElement(By.xpath("//*[@id=\"wp-block-search__input-1\"]"));
+        Common.findElement(By.xpath("//*[@id=\"primary\"]/div/p"));
+
     }
 
     @AfterTest
-    public void quit() { Driver.quit(); }
-
+    public void quit() {
+        Driver.quit();
+    }
 
 
 }
