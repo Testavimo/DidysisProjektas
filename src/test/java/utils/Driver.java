@@ -12,6 +12,8 @@ public class Driver {
         driver = new ChromeDriver();
     }
 
+    // TestNg
+
     public static WebDriver getDriver() {
         return driver;
     }

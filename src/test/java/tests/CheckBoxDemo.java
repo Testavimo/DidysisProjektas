@@ -41,8 +41,7 @@ public class CheckBoxDemo {
         Assert.assertEquals(actualResult, expectedResult);
     }
 
-    //String expectedOutput = "Rezultatų nėra.";
-    //String actualOutput = null;
+    //String expectedOutput = "Rezultatų nėra." ( Laukelyje irasius netinkama forma).
 
     //pages.vmu.CheckBoxDemo.clickOnTheCheckBox();
     // actualOutput = pages.vmu.CheckBoxDemo.getResultText();
